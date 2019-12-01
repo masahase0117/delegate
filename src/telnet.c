@@ -160,7 +160,7 @@ static void sigTERM(int sig){
 #define O_AUTH		37	/* Authentication */
 #define O_NENVIRON	39	/* New Environment Option RFC1572 */
 
-static char NOPstr[2] = { IAC, NOP };
+static char NOPstr[2] = { static_cast<char>(IAC), static_cast<char>(NOP) };
 
 static void sigurg(int sig)
 {	const char *ssig;
@@ -1810,7 +1810,8 @@ static int telnetonly(Connection *Conn)
 static struct { 
 	char *ne_USER;
 } clenv;
-static char doNewEnviron[] = {IAC,SB,O_NENVIRON,1,IAC,SE};
+static char doNewEnviron[] = {static_cast<char>(IAC),static_cast<char>(SB),static_cast<char>(O_NENVIRON),
+	static_cast<char>(1),static_cast<char>(IAC),static_cast<char>(SE)};
 static int getUSERenv(FILE *fc,FILE *tc,AuthInfo *au){
 	int rcc,nrcc;
 	int timeout = 15*1000;

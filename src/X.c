@@ -6033,14 +6033,14 @@ static void closeFd(FL_PAR,PCStr(wh),MuxCtx *Mc,Cony *Cv,int cn,Cony *Cx,int fd)
 	}
 }
 static char yy_ev0[32] = {
-	0x02,0x0A,0xFF,0xFF,
-	0xBE,0xB6,0x07,0xA9,
-	0x57,0x00,0x00,0x00,
-	0x15,0x00,0x40,0x00,
-	0x00,0x00,0x00,0x00,
-	0x4F,0x01,0x09,0x01,
-	0x4F,0x01,0xDD,0x00,
-	0x04,0x00,0x01,0x70
+	'\x02','\x0A','\xFF','\xFF',
+	'\xBE','\xB6','\x07','\xA9',
+	'\x57','\x00','\x00','\x00',
+	'\x15','\x00','\x40','\x00',
+	'\x00','\x00','\x00','\x00',
+	'\x4F','\x01','\x09','\x01',
+	'\x4F','\x01','\xDD','\x00',
+	'\x04','\x00','\x01','\x70'
 };
 static void closeXclients(Cony *Cv,int cn,int waitms){
 	int ci;

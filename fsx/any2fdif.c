@@ -144,7 +144,7 @@ static const char *indexbase = "freyasx/bank";
 #define T_CCODE	7
 
 #define CH_COPYR	0xA9
-static char thru8[32] = {CH_COPYR};
+static char thru8[32] = {static_cast<char>(CH_COPYR)};
 static int Itype = T_HTML;
 
 #define UT_QUERY	0x0008

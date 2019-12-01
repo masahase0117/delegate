@@ -173,10 +173,10 @@ int main(int ac,char *av[]){
 #endif
 
 static char passpadd[] = {
-	0x28, 0xBF, 0x4E, 0x5E, 0x4E, 0x75, 0x8A, 0x41,
-	0x64, 0x00, 0x4E, 0x56, 0xFF, 0xFA, 0x01, 0x08,
-	0x2E, 0x2E, 0x00, 0xB6, 0xD0, 0x68, 0x3E, 0x80,
-	0x2F, 0x0C, 0xA9, 0xFE, 0x64, 0x53, 0x69, 0x7A
+	'\x28', '\xBF', '\x4E', '\x5E', '\x4E', '\x75', '\x8A', '\x41',
+	'\x64', '\x00', '\x4E', '\x56', '\xFF', '\xFA', '\x01', '\x08',
+	'\x2E', '\x2E', '\x00', '\xB6', '\xD0', '\x68', '\x3E', '\x80',
+	'\x2F', '\x0C', '\xA9', '\xFE', '\x64', '\x53', '\x69', '\x7A'
 };
 static void setupCrypt(Pdf *pdf,int ver,int rev,int per,int len,PCStr(owner),PCStr(pass)){
 	Stdf *stdf;
